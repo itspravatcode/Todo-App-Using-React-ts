@@ -12,8 +12,6 @@ This is a simple Todo App built using **React (TypeScript)** and styled with **T
 
 ## Technologies Used
 - **React (TypeScript)**
-- **Tailwind CSS**
-- **localStorage API**
 
 ## Demo
 
