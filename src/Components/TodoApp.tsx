@@ -9,14 +9,12 @@ const TodoApp: React.FC = () => {
   const [deleteIndex, setDeleteIndex] = useState<number | null>(null);
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
-  // Load saved tasks from localStorage on mount
   useEffect(() => {
     const savedTodos = JSON.parse(localStorage.getItem('todos') || '[]') as string[];
     setTodo(savedTodos);
     setIsMounted(true);
   }, []);
 
-  // Save tasks to localStorage whenever todo changes
   useEffect(() => {
     if (isMounted) {
       localStorage.setItem('todos', JSON.stringify(todo));
